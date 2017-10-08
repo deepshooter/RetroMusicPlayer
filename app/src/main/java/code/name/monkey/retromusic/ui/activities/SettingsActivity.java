@@ -234,8 +234,12 @@ public class SettingsActivity extends AbsBaseActivity
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }
-
-            final TwoStatePreference colorAppShortcuts = (TwoStatePreference) findPreference("should_color_app_shortcuts");
+            TwoStatePreference toggleVolume = (TwoStatePreference) findPreference("toggle_volume");
+            toggleVolume.setOnPreferenceChangeListener((preference, o) -> {
+                getActivity().recreate();
+                return true;
+            });
+            TwoStatePreference colorAppShortcuts = (TwoStatePreference) findPreference("should_color_app_shortcuts");
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N_MR1) {
                 colorAppShortcuts.setVisible(false);
             } else {
