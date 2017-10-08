@@ -25,6 +25,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Pattern;
 
 import code.name.monkey.retromusic.R;
@@ -57,11 +58,22 @@ public class MusicUtil {
 
     @NonNull
     public static Intent createShareSongFileIntent(@NonNull final Song song, Context context) {
-        return new Intent()
-                .setAction(Intent.ACTION_SEND)
-                .putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName(), new File(song.data)))
-                .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                .setType("audio/*");
+        try {
+
+            return new Intent()
+                    .setAction(Intent.ACTION_SEND)
+                    .putExtra(Intent.EXTRA_STREAM,
+                            FileProvider.getUriForFile(context,
+                                    context.getApplicationContext().getPackageName(),
+                                    new File(song.data)))
+                    .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    .setType("audio/*");
+        } catch (IllegalArgumentException e) {
+            // TODO the path is most likely not like /storage/emulated/0/... but something like /storage/28C7-75B0/...
+            e.printStackTrace();
+            Toast.makeText(context, "Could not share this file, I'm aware of the issue.", Toast.LENGTH_SHORT).show();
+            return new Intent();
+        }
     }
 
     public static void setRingtone(@NonNull final Context context, final int id) {
@@ -131,11 +143,11 @@ public class MusicUtil {
         long minutes = (songDurationMillis / 1000) / 60;
         long seconds = (songDurationMillis / 1000) % 60;
         if (minutes < 60) {
-            return String.format("%01d:%02d", minutes, seconds);
+            return String.format(Locale.getDefault(), "%01d:%02d", minutes, seconds);
         } else {
             long hours = minutes / 60;
             minutes = minutes % 60;
-            return String.format("%d:%02d:%02d", hours, minutes, seconds);
+            return String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, seconds);
         }
     }
 
@@ -165,7 +177,7 @@ public class MusicUtil {
 
     @NonNull
     @SuppressWarnings("ResultOfMethodCallIgnored")
-    public static File createAlbumArtDir() {
+    private static File createAlbumArtDir() {
         File albumArtDir = new File(Environment.getExternalStorageDirectory(), "/albumthumbs/");
         if (!albumArtDir.exists()) {
             albumArtDir.mkdirs();
@@ -329,7 +341,7 @@ public class MusicUtil {
         return playlist.name != null && playlist.name.equals(context.getString(R.string.favorites));
     }
 
-    public static Observable<Playlist> getFavoritesPlaylist(@NonNull final Context context) {
+    private static Observable<Playlist> getFavoritesPlaylist(@NonNull final Context context) {
         return PlaylistLoader.getPlaylist(context, context.getString(R.string.favorites));
     }
 
