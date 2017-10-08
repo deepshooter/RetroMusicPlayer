@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.preference.PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
-        android:title="Advanced">
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory android:title="Advanced">
         <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATESwitchPreference
             android:defaultValue="true"
             android:key="corner_window"
             android:summary="@string/pref_summary_round_corners"
-            android:title="@string/pref_title_round_corners"/>
+            android:title="@string/pref_title_round_corners" />
 
         <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATESwitchPreference
             android:defaultValue="false"
             android:key="should_color_app_shortcuts"
             android:summary="@string/pref_summary_colored_app_shortcuts"
-            android:title="@string/pref_title_app_shortcuts"/>
+            android:title="@string/pref_title_app_shortcuts" />
 
         <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreference
             android:key="day_dream"
             android:summary="@string/pref_summary_day_dream"
-            android:title="@string/pref_title_day_dream"/>
+            android:title="@string/pref_title_day_dream" />
 
-        <!-- <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-             android:defaultValue="false"
-             android:key="toggle_full_screen"
-             android:summary="@string/pref_summary_toggle_full_screen"
-             android:title="@string/pref_title_toggle_full_screen"/>-->
+        <com.kabouzeid.appthemehelper.common.prefs.supportv7.ATESwitchPreference
+            android:defaultValue="false"
+            android:key="toggle_volume"
+            android:summary="@string/pref_summary_toggle_volume"
+            android:title="@string/pref_title_toggle_volume" />
     </com.kabouzeid.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
 </android.support.v7.preference.PreferenceScreen>
