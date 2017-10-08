@@ -37,9 +37,8 @@ import code.name.monkey.retromusic.ui.adapter.base.MediaEntryViewHolder;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
- * Created by hemanths on 20/08/17.
+ * @author Hemanth S (h4h13)
  */
-
 public class AboutActivity extends AbsBaseActivity {
     private static final int AVATAR_SIZE = 200;
     private static List<Contributors> sList = new ArrayList<>();
@@ -142,18 +141,19 @@ public class AboutActivity extends AbsBaseActivity {
         madeText.setText(String.format("Made with love %s in india", getEmojiByUnicode(heart)));
     }
 
-    private void openUrl(String str) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(str));
-        intent.setFlags(268435456);
-        startActivity(intent);
+    private void openUrl(String url) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(i);
     }
+
 
     public String getEmojiByUnicode(int unicode) {
         return new String(Character.toChars(unicode));
     }
 
-    @OnClick({R.id.gabriel_zegarra, R.id.aleksandar_tesic,
+    @OnClick({R.id.gabriel_zegarra, R.id.app_github, R.id.aleksandar_tesic,
             R.id.google_plus_circle_btn, R.id.telegram_btn,
             R.id.karimAbourGooglePlus, R.id.karimAbourGithub, R.id.luisGomezGooglePlus,
             R.id.luisGomezTwitter, R.id.app_telegram_channel, R.id.app_google_plus,
@@ -161,6 +161,9 @@ public class AboutActivity extends AbsBaseActivity {
             R.id.app_translation, R.id.app_rate, R.id.app_share, R.id.material_design_link})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.app_github:
+                openUrl(Constants.GITHUB_PROJECT);
+                break;
             case R.id.material_design_city_wallpaper_link:
                 openUrl(Constants.MATERIAL_TECHJUICE_IMAGES);
                 break;
@@ -240,7 +243,7 @@ public class AboutActivity extends AbsBaseActivity {
         @DrawableRes
         public int image;
 
-        public Contributors(@StringRes int title, @StringRes int text, @DrawableRes int image) {
+        Contributors(@StringRes int title, @StringRes int text, @DrawableRes int image) {
             this.title = title;
             this.text = text;
             this.image = image;
@@ -250,7 +253,7 @@ public class AboutActivity extends AbsBaseActivity {
     class ContributorsAdapter extends RecyclerView.Adapter<MediaEntryViewHolder> {
         private List<Contributors> mList = new ArrayList<>();
 
-        public ContributorsAdapter(List<Contributors> list) {
+        ContributorsAdapter(List<Contributors> list) {
             mList = list;
         }
 

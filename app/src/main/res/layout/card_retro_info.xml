@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_support"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -12,15 +12,18 @@
         android:layout_height="wrap_content"
         android:background="?attr/rectSelector"
         android:clickable="true"
+        android:focusable="true"
         android:gravity="center_vertical"
         android:minHeight="@dimen/md_listitem_height"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="PrivateResource">
 
         <ImageView
+            android:contentDescription="@string/retro"
             android:layout_width="52dp"
             android:layout_height="52dp"
             android:layout_margin="8dp"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                android:textColor="?android:attr/textColorPrimary"/>
+                android:textColor="?android:attr/textColorPrimary" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="match_parent"
@@ -45,16 +48,16 @@
                 android:alpha="0.85"
                 android:text="@string/app_summary"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                android:textColor="?android:attr/textColorSecondary"/>
+                android:textColor="?android:attr/textColorSecondary" />
         </LinearLayout>
 
 
     </LinearLayout>
 
     <HorizontalScrollView
-        android:scrollbars="none"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -64,6 +67,16 @@
             android:paddingStart="72dp">
 
             <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/app_github"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?roundSelector"
+                android:contentDescription="@string/social_buttons"
+                android:padding="16dp"
+                android:tint="?iconColor"
+                app:srcCompat="@drawable/ic_github_circle_white_24dp" />
+
+            <android.support.v7.widget.AppCompatImageButton
                 android:id="@+id/app_telegram_channel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,7 +84,7 @@
                 android:contentDescription="@string/social_buttons"
                 android:padding="16dp"
                 android:tint="?iconColor"
-                app:srcCompat="@drawable/ic_telegram_white"/>
+                app:srcCompat="@drawable/ic_telegram_white" />
 
             <android.support.v7.widget.AppCompatImageButton
                 android:id="@+id/app_google_plus"
@@ -81,7 +94,7 @@
                 android:contentDescription="@string/social_buttons"
                 android:padding="16dp"
                 android:tint="?iconColor"
-                app:srcCompat="@drawable/ic_google_circles_communities_white_24dp"/>
+                app:srcCompat="@drawable/ic_google_circles_communities_white_24dp" />
 
             <android.support.v7.widget.AppCompatImageButton
                 android:id="@+id/app_translation"
@@ -91,7 +104,7 @@
                 android:contentDescription="@string/social_buttons"
                 android:padding="16dp"
                 android:tint="?iconColor"
-                app:srcCompat="@drawable/ic_flag_white_24dp"/>
+                app:srcCompat="@drawable/ic_flag_white_24dp" />
 
             <android.support.v7.widget.AppCompatImageButton
                 android:id="@+id/app_rate"
@@ -101,7 +114,7 @@
                 android:contentDescription="@string/social_buttons"
                 android:padding="16dp"
                 android:tint="?iconColor"
-                app:srcCompat="@drawable/ic_star_white_24dp"/>
+                app:srcCompat="@drawable/ic_star_white_24dp" />
 
             <android.support.v7.widget.AppCompatImageButton
                 android:id="@+id/app_share"
@@ -111,7 +124,7 @@
                 android:contentDescription="@string/social_buttons"
                 android:padding="16dp"
                 android:tint="?iconColor"
-                app:srcCompat="@drawable/ic_share_white_24dp"/>
+                app:srcCompat="@drawable/ic_share_white_24dp" />
 
         </LinearLayout>
     </HorizontalScrollView>
