@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/>
+            <padding
+                android:bottom="196dp"
+                android:left="196dp"
+                android:right="196dp"
+                android:top="196dp"/>
+            <gradient
+                android:angle="135"
+                android:endColor="@color/md_green_A700"
+                android:startColor="@color/md_blue_A200"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/retro_music_logo"/>
+</layer-list>

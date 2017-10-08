@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="donation_ids" translatable="false">
+        <item>donation_1</item>
+        <item>donation_2</item>
+        <item>donation_3</item>
+        <item>donation_4</item>
+        <item>donation_5</item>
+        <item>donation_6</item>
+    </string-array>
+    <string name="dev_info" translatable="false">hi i\'m hemanth s, love to be android developer, i\'m from hosur, tamil nadu, india.</string>
+
+    <string name="luis_gomez" translatable="false">Luis Gomez</string>
+    <string name="luis_gomez_summary" translatable="false">For making Play Store Illustrations and App icon</string>
+    <string name="karim_abou_zeid" translatable="false">Karim Abou Zeid</string>
+    <string name="karim_abou_zeid_summary" translatable="false">For the project Phonograph and Theme engine</string>
+
+    <string name="app_name" translatable="false">Retro Music</string>
+    <string name="google_plus" translatable="false">Google Plus</string>
+    <string name="git_hub" translatable="false">GitHub</string>
+    <string name="twitter" translatable="false">Twitter</string>
+    <string name="social_buttons" translatable="false">Social Buttons</string>
+    <string name="license_dialog_style" translatable="false">
+        body {
+        background-color: #{bg-color};
+        color: #{text-color};
+        font-family: sans-serif;
+        overflow-wrap: break-word;
+        }
+        pre {
+        background-color: #{license-bg-color};
+        padding: 1em;
+        white-space: pre-wrap;
+        }
+    </string>
+    <string name="gabriel_zegarra" translatable="false">Gabriel Zegarra</string>
+    <string name="aleksandar_tesic" translatable="false">Aleksandar Tešić</string>
+    <string name="hemanth_s" translatable="false">Hemanth S</string>
+    <string name="hosur_india" translatable="false">Hosur, India</string>
+</resources>

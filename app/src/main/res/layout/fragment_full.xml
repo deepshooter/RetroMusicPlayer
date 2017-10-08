@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/player_album_cover_fragment"
+        android:name="code.name.monkey.retromusic.ui.fragments.player.PlayerAlbumCoverFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_player_album_cover"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@drawable/shadow_down_edited"
+        android:minHeight="128dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/player_status_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/status_bar_padding"/>
+
+        </FrameLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/player_toolbar"
+            style="@style/Toolbar48"
+            android:navigationIcon="@drawable/ic_close_white_24dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:subtitleTextAppearance="@style/FullScreenSubTitleAppearance"
+            app:titleMarginStart="0dp"
+            app:titleTextAppearance="@style/FullScreenTitleAppearance"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/shadow_up_edited"
+            android:minHeight="128dp"/>
+
+        <fragment
+            android:id="@+id/playback_controls_fragment"
+            android:name="code.name.monkey.retromusic.ui.fragments.player.full.FullPlaybackControlsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            tools:layout="@layout/fragment_full_player_controls"/>
+    </FrameLayout>
+</FrameLayout>

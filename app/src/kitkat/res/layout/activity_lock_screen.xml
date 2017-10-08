@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingTop="@dimen/status_bar_padding">
+
+    <fragment
+        android:id="@+id/playback_controls_fragment"
+        android:name="code.name.monkey.retromusic.ui.fragments.player.normal.PlayerPlaybackControlsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        tools:layout="@layout/fragment_player_playback_controls"/>
+
+    <fragment
+        android:id="@+id/volume_fragment"
+        android:name="code.name.monkey.retromusic.ui.fragments.VolumeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_volume"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <code.name.monkey.retromusic.views.HeightFitSquareLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="8dp">
+
+            <code.name.monkey.retromusic.views.WidthFitSquareLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <com.h6ah4i.android.materialshadowninepatch.MaterialShadowContainerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </com.h6ah4i.android.materialshadowninepatch.MaterialShadowContainerView>
+
+            </code.name.monkey.retromusic.views.WidthFitSquareLayout>
+        </code.name.monkey.retromusic.views.HeightFitSquareLayout>
+    </FrameLayout>
+
+    <com.ebanx.swipebtn.SwipeButton
+        android:id="@+id/swipe_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="0"
+        app:button_background="@drawable/shape_button_edit"
+        app:button_bottom_padding="16dp"
+        app:button_image_height="52dp"
+        app:button_image_width="52dp"
+        app:button_left_padding="16dp"
+        app:button_right_padding="16dp"
+        app:button_top_padding="16dp"
+        app:has_activate_state="true"
+        app:initial_state="disabled"
+        app:inner_text="Swipe to unlock"
+        app:inner_text_background="@drawable/shape_rounded_edit"
+        app:inner_text_bottom_padding="16dp"
+        app:inner_text_color="@android:color/white"
+        app:inner_text_size="14sp"
+        app:inner_text_top_padding="16dp"/>
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_support"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/rectSelector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/md_listitem_height"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_margin="8dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp">
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="?android:attr/textColorPrimary"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.85"
+                android:text="@string/app_summary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="?android:attr/textColorSecondary"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="0dp"
+            android:paddingStart="72dp">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/app_telegram_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?roundSelector"
+                android:contentDescription="@string/social_buttons"
+                android:padding="16dp"
+                android:tint="?iconColor"
+                app:srcCompat="@drawable/ic_telegram_white"/>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/app_google_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?roundSelector"
+                android:contentDescription="@string/social_buttons"
+                android:padding="16dp"
+                android:tint="?iconColor"
+                app:srcCompat="@drawable/ic_google_circles_communities_white_24dp"/>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/app_translation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?roundSelector"
+                android:contentDescription="@string/social_buttons"
+                android:padding="16dp"
+                android:tint="?iconColor"
+                app:srcCompat="@drawable/ic_flag_white_24dp"/>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/app_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?roundSelector"
+                android:contentDescription="@string/social_buttons"
+                android:padding="16dp"
+                android:tint="?iconColor"
+                app:srcCompat="@drawable/ic_star_white_24dp"/>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/app_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?roundSelector"
+                android:contentDescription="@string/social_buttons"
+                android:padding="16dp"
+                android:tint="?iconColor"
+                app:srcCompat="@drawable/ic_share_white_24dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

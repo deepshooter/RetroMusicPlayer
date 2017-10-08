@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<notices>
+    <notice>
+        <name>Phonograph</name>
+        <url>https://github.com/kabouzeid/Phonograph</url>
+      <license>GNU General Public License 3.0</license>
+    </notice>
+    <notice>
+        <name>RxAndroid</name>
+        <url>https://github.com/ReactiveX/RxAndroid</url>
+        <copyright>Copyright 2015 The RxAndroid authors</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+            <name>RecyclerView-FastScroll</name>
+            <url>https://github.com/timusus/RecyclerView-FastScroll</url>
+            <copyright>Copyright (C) 2015 Jake Wharton</copyright>
+            <license>Apache Software License 2.0</license>
+        </notice>
+    <notice>
+        <name>Calligraphy</name>
+        <url>https://github.com/chrisjenx/Calligraphy</url>
+        <copyright>Copyright 2013 Christopher Jenkins</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>RxBinding</name>
+        <url>https://github.com/JakeWharton/RxBinding</url>
+        <copyright>Copyright 2013 Square, Inc.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>Android Open Source Project</name>
+        <url>http://developer.android.com/tools/support-library/index.html</url>
+        <copyright>Copyright (C) 2016 The Android Open Source Project</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Android Sliding Up Panel</name>
+        <url>https://github.com/umano/AndroidSlidingUpPanel</url>
+        <copyright/>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Android Support Libraries</name>
+        <url>http://developer.android.com/tools/support-library/index.html</url>
+        <copyright>Copyright (C) 2016 The Android Open Source Project</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Butter Knife</name>
+        <url>https://github.com/JakeWharton/butterknife</url>
+        <copyright>Copyright 2013 Jake Wharton</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Eleven</name>
+        <url>https://github.com/CyanogenMod/android_packages_apps_Eleven</url>
+        <copyright>Copyright (c) 2014, The CyanogenMod Project</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Glide</name>
+        <url>https://github.com/bumptech/glide</url>
+    </notice>
+    <notice>
+            <name>Material Contextual Action Bar</name>
+            <url>https://github.com/afollestad/material-cab</url>
+            <copyright>Copyright 2016 Aidan Follestad</copyright>
+            <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Advanced RecyclerView</name>
+        <url>https://github.com/h6ah4i/android-advancedrecyclerview</url>
+        <copyright>Copyright (C) 2015 Haruki Hasegawa</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Material Dialogs</name>
+        <url>https://github.com/afollestad/material-dialogs</url>
+        <copyright>Copyright (c) 2015 Aidan Michael Follestad</copyright>
+        <license>MIT License</license>
+    </notice>
+    <notice>
+        <name>OkHttp</name>
+        <url>https://github.com/square/okhttp</url>
+        <copyright/>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+        <name>Retrofit</name>
+        <url>https://github.com/square/retrofit</url>
+        <copyright>Copyright 2013 Square, Inc.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+    <notice>
+            <name>MultiImageView</name>
+            <url>https://github.com/stfalcon-studio/MultiImageView</url>
+            <copyright>Copyright 2017 stfalcon.com</copyright>
+            <license>Apache Software License 2.0</license>
+        </notice>
+    <notice>
+            <name>CircleImageView</name>
+            <url>https://github.com/hdodenhof/CircleImageView</url>
+            <copyright>Copyright 2014 - 2017 Henning Dodenhof</copyright>
+            <license>Apache Software License 2.0</license>
+        </notice>
+</notices>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="0dp"
+                android:left="72dp"
+                android:right="0dp"
+                android:top="72dp"/>
+            <gradient
+                android:angle="135"
+                android:endColor="@color/md_blue_A700"
+                android:startColor="@color/md_green_A200"/>
+            <corners android:radius="4dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_artist_music_note_white"/>
+</layer-list>

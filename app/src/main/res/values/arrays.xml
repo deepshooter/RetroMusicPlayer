@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <array name="pref_auto_download_images_titles">
+        <item>@string/always</item>
+        <item>@string/only_on_wifi</item>
+        <item>@string/never</item>
+    </array>
+    <string-array name="pref_general_theme_list_titles">
+        <item>@string/light_theme_name</item>
+        <item>@string/dark_theme_name</item>
+        <item>@string/black_theme_name</item>
+    </string-array>
+
+    <string-array name="pref_general_theme_list_values">
+        <item>light</item>
+        <item>dark</item>
+        <item>black</item>
+    </string-array>
+    <array name="pref_auto_download_images_values">
+        <item>always</item>
+        <item>only_wifi</item>
+        <item>never</item>
+    </array>
+    <string name="dark_theme_name">Dark</string>
+    <string-array name="pref_playlists_last_added_interval_titles">
+        <item>@string/today</item>
+        <item>@string/this_week</item>
+        <item>@string/this_month</item>
+        <item>@string/past_three_months</item>
+        <item>@string/this_year</item>
+    </string-array>
+
+    <string-array name="pref_playlists_last_added_interval_values">
+        <item>today</item>
+        <item>this_week</item>
+        <item>this_month</item>
+        <item>past_three_months</item>
+        <item>this_year</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>https://lh3.googleusercontent.com/O8PZ30vXgddUt86G7SVXCZalWHM627GzqZ4w3wwIY091l6-Edb7KFBkzbveYqh-cz9-ThPmBV5VByQ=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/4-xCotvWEB4BpGQ2GH1Mw9NztelglyJmVo9mosatoGp2KJRSHxcB5KWHugV8F7OR7c7y72BaXlfDcQ=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/_c67ija-8pq4SsGlTh3yIghatQ__sGhzyUdt_CH0pYoVNWiuCbi6dNyyrMhwhlTNTx2iZXPoAmk8yw=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/Ev3zAcZD6DdlpaULpD1lCaW4x7zTo2MSQj6CvrVsa_Bmnp0GPWBFMge_6MOgHDh0p3mfDWtLSwozXA=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/Ojs8NOha8SjlokEdH6C1B17YCOZEKmGVstaBh6eEY2Hoa9oNRx8BdVxLIgh1sVeq62PApt6CnNm71w=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/rjnhcTiG4lYSASGSRbfPRto5iUnJ_KFDWOIiiR3J7lAPje5kPxgLpYaa-gXkpVSFZmJcOWWNmhEE0w=w1026-h440-rw</item>
+        <item tools:ignore="TypographyDashes">https://lh3.googleusercontent.com/b2trYRZBS8mtlLzbZKHB--LlmamvDGi7mHtbkXTr3i6IvgyyOxQVt7d8fwQ6jUcM5c00w6qEf0FdtA=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/GE-l6efeRYjUf2-g8bcEi7DHUKRP018G-KOfs395L2O60Jd0dKFK8KpwkHcxcavXBZJlW4T0o5RzWQ=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/hJMasGfVxSLeujR9Lp1CtL_SI_s-Xe6zcI6reh3W-lhO4moTXxnUYkdf6lde522NaRK65zIijA4Ctg=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/o_xsIgBdvKXsqZBahpg0gA4gbpYBnlVAHI64i23AyOzkzRnaevFe4qI-WocjiAH8hwKNLK08bulrgQ=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/eT3dj1Tpyh4khjiQ4RG762nSlY5z11UGXGkFcPnlhXhzt8Kho7MKgrNJ4OUdAV0oI2g_Xr7w-0BqEQ=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/1vMW_GQQkBsG4PCrtdL8Fx4-sd9GARep7NdN7285YwbrcvdVImKW6xsaN8JzGocmzUHAGPhUCEL2imE=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/3v9AfbCNkIrmaqU4T0hjdCLJ75oYt63znqZKefblynsegW0VIqbapj4Ri5Ccp2Syif1_31rPx9jGhOM=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/7nl9zEWM2uRNEKC9bYhEjFOSqD1TEH8rejxNhDFimqGLnZsuvc4uHHYIjDXLchDSL87Vb3cNdGtsAJk=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/D6OfMdeLHhmi6ofFDEgohy67AzprvvMT-jBkqqzE5IOXr9WpD0yMZKIpR7gEet6kwFbDpsKhcQEYfAk=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/VgOGMAXVSARYM_ryK5YlbuNUsgkBLH3pMb6hqYE5pQH0Ccii-WuUR9CTszRcGsneSrcFyWCXHjkJmRo=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/WGs1OLsbiS_hWRaMK2ArYudf9kqqX6c5YxeDC4ADtwwwOdCdoNNzw0t3okRX68VXheUJmVJfXGxr_xA=w782-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/bBKY2lCy1ew134UdQCdQ1ZVbCXQUd76GGSjD86sGReyBG6tK0D5ffQ27pNgkZTKB3JkMfywORGIZsu0=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/fgkXwh8GbtViQuXN5cEuZmxsMnAIzETAob1xz9N06ZIL1agCzGevaVGInN_AFyC0Cu8ASncHjahrbsY=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/g2gXxH5TJpKKV-c7o-3H8A-2U6hVJ4Vv2nI9t3NH_JtxY5DWU87A7QuFRUAX-gM2mZCejjOWAHXRtUg=w784-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/ixlxNtcYSXxrLKDE9QxNsBrqU2V9tsZZUouYjjAwRHw0zGkfymniSiqoXGiViIHFOXIwlpPIJN-4CKc=w1026-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/sDFoNchISxCz8RG11sVAw93bvoGgI2Fw4KvG4H5IgFaB8OryWcdnxUW_Rvhexwiw5r6bPyh1aNrnPco=w782-h440-rw</item>
+        <item>https://lh3.googleusercontent.com/tKIi0fwGIJVMgK6nVSurQzcTqFfBsAbIks-vGTJsdb9H18k0dBNWSC0209Yzeh0hhk6n1LmDm8CxZe0=w1026-h440-rw</item>
+        <item tools:ignore="TypographyDashes">https://lh3.googleusercontent.com/ttjn5lvxryyU8J-Uw7Jvhqe2HaRJ-SgpAwo8-2Gj4oW4OEesykBJ1w625NvjrK1LOTZf_sX6SjKm5AA=w782-h440-rw</item>
+    </string-array>
+
+    <string-array name="night">
+
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/44.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/40.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/36.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/32.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/28.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/24.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/20.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/16.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/12.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/8.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/4.png</item>
+    </string-array>
+    <string-array name="evening">
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/43.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/39.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/35.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/31.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/27.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/23.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/19.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/15.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/11.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/7.png</item>
+    </string-array>
+    <string-array name="after_noon">
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/42.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/38.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/34.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/30.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/26.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/22.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/18.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/14.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/10.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/6.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/2.png</item>
+    </string-array>
+    <string-array name="morning">
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/41.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/37.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/33.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/29.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/25.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/21.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/17.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/13.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/9.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/5.png</item>
+        <item>https://cdn.techjuice.pk/wp-content/uploads/2016/07/1.png</item>
+    </string-array>
+    <string-array name="random">
+        <item>https://lh3.googleusercontent.com/0gDt03Hl3zhTD63cLgzhCgshxC79IMePN-93WavX6XW7hiEWJ0NoF2rv_rNUZ7p7f4W6aJFQ-rtxEAc=w1002-h440-rw</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+</resources>
