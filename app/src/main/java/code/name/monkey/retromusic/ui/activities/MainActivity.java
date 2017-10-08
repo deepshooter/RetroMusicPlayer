@@ -202,7 +202,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
 
     @OnClick(R.id.user_info)
     public void onViewClicked(View view) {
-        startActivity(new Intent(this, UserInfoActivity.class));
+        startActivityForResult(new Intent(this, UserInfoActivity.class), APP_USER_INFO_REQUEST);
     }
 
     private String getCurrentDayText() {
@@ -223,7 +223,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     protected View createContentView() {
         @SuppressLint("InflateParams")
         View contentView = getLayoutInflater().inflate(R.layout.activity_main_drawer_layout, null);
-        ViewGroup drawerContent = ButterKnife.findById(contentView, R.id.drawer_content_container);
+        ViewGroup drawerContent = contentView.findViewById(R.id.drawer_content_container);
         drawerContent.addView(wrapSlidingMusicPanel(R.layout.activity_main_content));
         return contentView;
     }
@@ -294,9 +294,8 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
             final int id = (int) parseIdFromIntent(intent, "playlistId", "playlist");
             if (id >= 0) {
                 int position = intent.getIntExtra("position", 0);
-                PlaylistSongsLoader.getPlaylistSongList(this, id).subscribe(songs1 -> {
-                    MusicPlayerRemote.openQueue((ArrayList<Song>) (List) songs1, position, true);
-                });
+                PlaylistSongsLoader.getPlaylistSongList(this, id).subscribe(songs1 ->
+                        MusicPlayerRemote.openQueue(songs1, position, true));
 
                 handled = true;
             }
@@ -362,7 +361,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
                 break;
             case REQUEST_CODE_THEME:
             case APP_USER_INFO_REQUEST:
-                recreate();
+                setupTitles();
                 break;
         }
 
@@ -403,9 +402,6 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     }
 
     private void loadImageFromStorage(@Nullable String path) {
-        if (path.isEmpty()) {
-            return;
-        }
         new Compressor(this)
                 .setMaxHeight(300)
                 .setMaxWidth(300)
@@ -422,8 +418,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
     class NavigationItemsAdapter extends RecyclerView.Adapter<NavigationItemsAdapter.ViewHolder> {
         List<Pair<Integer, Integer>> mList = new ArrayList<>();
 
-
-        public NavigationItemsAdapter() {
+        NavigationItemsAdapter() {
             mList.add(new Pair<>(R.drawable.ic_home_white_24dp, R.string.home));
             mList.add(new Pair<>(R.drawable.ic_library_add_white_24dp, R.string.library));
             mList.add(new Pair<>(R.drawable.ic_folder_white_24dp, R.string.folders));
