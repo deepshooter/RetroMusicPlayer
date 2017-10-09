@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:id="@+id/playback_controls"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              tools:ignore="MissingPrefix">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playback_controls"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
 
 
     <LinearLayout
@@ -24,7 +24,7 @@
             android:progressDrawable="@drawable/color_progress_seek"
             android:splitTrack="false"
             android:thumb="@drawable/ic_action_thumb"
-            tools:progress="20"/>
+            tools:progress="20" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="10sp"
                 android:textStyle="bold"
-                tools:text="22.00"/>
+                tools:text="22.00" />
 
             <TextView
                 android:id="@+id/player_song_total_time"
@@ -50,7 +50,7 @@
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="10sp"
                 android:textStyle="bold"
-                tools:text="22.00"/>
+                tools:text="22.00" />
 
         </FrameLayout>
 
@@ -70,7 +70,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="?android:attr/textColorPrimary"
         android:textStyle="bold"
-        tools:text="Title"/>
+        tools:text="Title" />
 
     <TextView
         android:id="@+id/text"
@@ -85,7 +85,7 @@
         android:paddingStart="16dp"
         android:textColor="?android:attr/textColorSecondary"
         android:textSize="10sp"
-        tools:text="Text"/>
+        tools:text="Text" />
 
     <RelativeLayout
         android:id="@+id/player_media_controller_container"
@@ -105,7 +105,7 @@
             android:padding="16dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_skip_previous_white_24dp"
-            tools:ignore="MissingPrefix"/>
+            tools:ignore="MissingPrefix" />
 
         <ImageButton
             android:id="@+id/player_next_button"
@@ -118,7 +118,7 @@
             android:padding="16dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_skip_next_white_24dp"
-            tools:ignore="MissingPrefix"/>
+            tools:ignore="MissingPrefix" />
 
         <ImageButton
             android:id="@+id/player_repeat_button"
@@ -131,7 +131,7 @@
             android:padding="16dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_repeat_white_24dp"
-            tools:ignore="MissingPrefix"/>
+            tools:ignore="MissingPrefix" />
 
         <ImageButton
             android:id="@+id/player_shuffle_button"
@@ -144,13 +144,13 @@
             android:padding="16dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_shuffle_white_24dp"
-            tools:ignore="MissingPrefix"/>
+            tools:ignore="MissingPrefix" />
 
         <Space
             android:id="@+id/dummy_fab"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true" />
 
         <ImageButton
             android:id="@+id/player_play_pause_fab"
@@ -161,14 +161,20 @@
             android:background="@drawable/color_circle_gradient"
             android:elevation="6dp"
             android:padding="16dp"
-            app:srcCompat="@drawable/ic_play_arrow_white_24dp"/>
+            app:srcCompat="@drawable/ic_play_arrow_white_24dp" />
 
     </RelativeLayout>
 
-    <fragment
-        android:id="@+id/volume_fragment"
-        android:name="code.name.monkey.retromusic.ui.fragments.VolumeFragment"
+    <FrameLayout
+        android:id="@+id/volume_fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout="@layout/fragment_volume"/>
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/volume_fragment"
+            android:name="code.name.monkey.retromusic.ui.fragments.VolumeFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_volume" />
+    </FrameLayout>
 </LinearLayout>
