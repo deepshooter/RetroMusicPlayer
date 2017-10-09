@@ -23,6 +23,13 @@ import com.h6ah4i.android.widget.advrecyclerview.animator.RefactoredDefaultItemA
 import com.h6ah4i.android.widget.advrecyclerview.draggable.RecyclerViewDragDropManager;
 import com.h6ah4i.android.widget.advrecyclerview.utils.WrapperAdapterUtils;
 import com.kabouzeid.appthemehelper.ThemeStore;
+import com.retro.musicplayer.backend.loaders.PlaylistLoader;
+import com.retro.musicplayer.backend.model.AbsCustomPlaylist;
+import com.retro.musicplayer.backend.model.Playlist;
+import com.retro.musicplayer.backend.model.PlaylistSong;
+import com.retro.musicplayer.backend.model.Song;
+import com.retro.musicplayer.backend.mvp.contract.PlaylistSongsContract;
+import com.retro.musicplayer.backend.mvp.presenter.PlaylistSongsPresenter;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 import java.util.ArrayList;
@@ -35,13 +42,7 @@ import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.helper.menu.PlaylistMenuHelper;
 import code.name.monkey.retromusic.interfaces.CabHolder;
-import code.name.monkey.retromusic.loaders.PlaylistLoader;
-import code.name.monkey.retromusic.model.AbsCustomPlaylist;
-import code.name.monkey.retromusic.model.Playlist;
-import code.name.monkey.retromusic.model.PlaylistSong;
-import code.name.monkey.retromusic.model.Song;
-import code.name.monkey.retromusic.mvp.contract.PlaylistSongsContract;
-import code.name.monkey.retromusic.mvp.presenter.PlaylistSongsPresenter;
+
 import code.name.monkey.retromusic.ui.activities.base.AbsSlidingMusicPanelActivity;
 import code.name.monkey.retromusic.ui.adapter.song.OrderablePlaylistSongAdapter;
 import code.name.monkey.retromusic.ui.adapter.song.PlaylistSongAdapter;
@@ -156,7 +157,9 @@ public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity impleme
     }
 
     private void setUpRecyclerView() {
-        ViewUtil.setUpFastScrollRecyclerViewColor(this, ((FastScrollRecyclerView) recyclerView), ThemeStore.accentColor(this));
+        ViewUtil.setUpFastScrollRecyclerViewColor(this,
+                ((FastScrollRecyclerView) recyclerView),
+                ThemeStore.accentColor(this));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         if (playlist instanceof AbsCustomPlaylist) {
             adapter = new PlaylistSongAdapter(this, new ArrayList<Song>(), R.layout.item_list, false, this);
@@ -261,8 +264,7 @@ public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity impleme
                 setToolbarTitle(playlist.name);
             }
         }
-
-        //getSupportLoaderManager().restartLoader(LOADER_ID, null, this);
+        mSongsPresenter.subscribe();
     }
 
     private void setToolbarTitle(String title) {

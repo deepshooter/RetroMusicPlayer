@@ -6,9 +6,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.retro.musicplayer.backend.model.Home;
+
 import java.util.ArrayList;
 
-import code.name.monkey.retromusic.model.Home;
 import code.name.monkey.retromusic.ui.adapter.base.MediaEntryViewHolder;
 
 /**

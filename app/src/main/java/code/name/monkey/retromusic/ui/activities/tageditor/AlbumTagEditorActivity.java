@@ -22,6 +22,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.retro.musicplayer.backend.loaders.AlbumLoader;
+import com.retro.musicplayer.backend.model.Song;
 
 import org.jaudiotagger.tag.FieldKey;
 
@@ -36,8 +38,7 @@ import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteTranscoder;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteWrapper;
 import code.name.monkey.retromusic.lastfm.rest.LastFMRestClient;
-import code.name.monkey.retromusic.loaders.AlbumLoader;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.util.ImageUtil;
 import code.name.monkey.retromusic.util.LastFMUtil;
 import code.name.monkey.retromusic.util.RetroMusicColorUtil;

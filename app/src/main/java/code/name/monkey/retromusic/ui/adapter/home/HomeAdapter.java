@@ -15,13 +15,13 @@ import android.widget.TextView;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
+import com.retro.musicplayer.backend.loaders.PlaylistSongsLoader;
+import com.retro.musicplayer.backend.model.Playlist;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.loaders.PlaylistSongsLoader;
-import code.name.monkey.retromusic.model.Playlist;
 import code.name.monkey.retromusic.ui.adapter.base.MediaEntryViewHolder;
 import code.name.monkey.retromusic.util.NavigationUtil;
 import io.reactivex.android.schedulers.AndroidSchedulers;

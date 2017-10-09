@@ -20,6 +20,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
+import com.retro.musicplayer.backend.mvp.contract.SearchContract;
+import com.retro.musicplayer.backend.mvp.presenter.SearchPresenter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,8 +33,6 @@ import butterknife.OnClick;
 import code.name.monkey.retromusic.Injection;
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.interfaces.LoaderIds;
-import code.name.monkey.retromusic.mvp.contract.SearchContract;
-import code.name.monkey.retromusic.mvp.presenter.SearchPresenter;
 import code.name.monkey.retromusic.ui.activities.base.AbsMusicServiceActivity;
 import code.name.monkey.retromusic.ui.adapter.SearchAdapter;
 import code.name.monkey.retromusic.util.Util;

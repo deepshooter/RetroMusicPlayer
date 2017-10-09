@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.ThemeStore;
+import com.retro.musicplayer.backend.model.Song;
+import com.retro.musicplayer.backend.model.lyrics.Lyrics;
 
 import java.io.File;
 
@@ -25,8 +27,7 @@ import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.helper.MusicProgressViewUpdateHelper;
 import code.name.monkey.retromusic.lastfm.rest.KygouClient;
 import code.name.monkey.retromusic.lastfm.rest.model.KuGouSearchLyricResult;
-import code.name.monkey.retromusic.model.Song;
-import code.name.monkey.retromusic.model.lyrics.Lyrics;
+
 import code.name.monkey.retromusic.ui.activities.base.AbsMusicServiceActivity;
 import code.name.monkey.retromusic.util.LyricUtil;
 import code.name.monkey.retromusic.util.MusicUtil;

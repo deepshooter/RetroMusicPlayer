@@ -2,7 +2,7 @@ package code.name.monkey.retromusic.helper;
 
 import android.support.annotation.NonNull;
 
-import code.name.monkey.retromusic.model.Song;
+import com.retro.musicplayer.backend.model.Song;
 
 import java.util.Collections;
 import java.util.List;

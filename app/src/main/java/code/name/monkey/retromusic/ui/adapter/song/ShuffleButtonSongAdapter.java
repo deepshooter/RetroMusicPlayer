@@ -7,13 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
+import com.retro.musicplayer.backend.model.Song;
 
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.interfaces.CabHolder;
-import code.name.monkey.retromusic.model.Song;
+
 
 /**
  * @author Karim Abou Zeid (kabouzeid)

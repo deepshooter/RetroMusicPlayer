@@ -27,7 +27,14 @@ import android.view.KeyEvent;
 
 import code.name.monkey.retromusic.BuildConfig;
 
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_PAUSE;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_PLAY;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_REWIND;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_SKIP;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_STOP;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_TOGGLE_PAUSE;
 
+import static com.retro.musicplayer.backend.RetroConstants.*;
 /**
  * Used to control headset playback.
  * Single press: pause/resume
@@ -58,13 +65,13 @@ public class MediaButtonIntentReceiver extends BroadcastReceiver {
                     if (DEBUG) Log.v(TAG, "Handling headset click, count = " + clickCount);
                     switch (clickCount) {
                         case 1:
-                            command = MusicService.ACTION_TOGGLE_PAUSE;
+                            command = ACTION_TOGGLE_PAUSE;
                             break;
                         case 2:
-                            command = MusicService.ACTION_SKIP;
+                            command = ACTION_SKIP;
                             break;
                         case 3:
-                            command = MusicService.ACTION_REWIND;
+                            command = ACTION_REWIND;
                             break;
                         default:
                             command = null;
@@ -96,23 +103,23 @@ public class MediaButtonIntentReceiver extends BroadcastReceiver {
             String command = null;
             switch (keycode) {
                 case KeyEvent.KEYCODE_MEDIA_STOP:
-                    command = MusicService.ACTION_STOP;
+                    command = ACTION_STOP;
                     break;
                 case KeyEvent.KEYCODE_HEADSETHOOK:
                 case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:
-                    command = MusicService.ACTION_TOGGLE_PAUSE;
+                    command = ACTION_TOGGLE_PAUSE;
                     break;
                 case KeyEvent.KEYCODE_MEDIA_NEXT:
-                    command = MusicService.ACTION_SKIP;
+                    command = ACTION_SKIP;
                     break;
                 case KeyEvent.KEYCODE_MEDIA_PREVIOUS:
-                    command = MusicService.ACTION_REWIND;
+                    command = ACTION_REWIND;
                     break;
                 case KeyEvent.KEYCODE_MEDIA_PAUSE:
-                    command = MusicService.ACTION_PAUSE;
+                    command = ACTION_PAUSE;
                     break;
                 case KeyEvent.KEYCODE_MEDIA_PLAY:
-                    command = MusicService.ACTION_PLAY;
+                    command = ACTION_PLAY;
                     break;
             }
             if (command != null) {

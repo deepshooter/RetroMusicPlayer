@@ -18,13 +18,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.kabouzeid.appthemehelper.util.ATHUtil;
+import com.retro.musicplayer.backend.model.Song;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.ui.fragments.base.AbsPlayerFragment;
 import code.name.monkey.retromusic.ui.fragments.player.PlayerAlbumCoverFragment;
 import code.name.monkey.retromusic.util.LyricUtil;

@@ -8,9 +8,9 @@ import android.text.Html;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.retro.musicplayer.backend.model.smartplaylist.AbsSmartPlaylist;
 
 import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.model.smartplaylist.AbsSmartPlaylist;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)

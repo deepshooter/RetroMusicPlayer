@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+
     <string name="accent_color">Accent color</string>
     <string name="accent_color_desc">The accent theme color, defaults to green.</string>
 

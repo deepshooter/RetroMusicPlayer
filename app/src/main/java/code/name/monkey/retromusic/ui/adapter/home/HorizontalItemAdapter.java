@@ -8,13 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
+import com.retro.musicplayer.backend.model.Song;
 
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.glide.SongGlideRequest;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.ui.adapter.base.MediaEntryViewHolder;
 
 /**

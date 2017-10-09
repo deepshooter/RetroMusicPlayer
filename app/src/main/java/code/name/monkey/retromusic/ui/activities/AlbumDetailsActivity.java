@@ -26,6 +26,10 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.kabouzeid.appthemehelper.util.TintHelper;
+import com.retro.musicplayer.backend.model.Album;
+import com.retro.musicplayer.backend.model.Song;
+import com.retro.musicplayer.backend.mvp.contract.AlbumDetailsContract;
+import com.retro.musicplayer.backend.mvp.presenter.AlbumDetailsPresenter;
 
 import java.util.ArrayList;
 
@@ -41,10 +45,8 @@ import code.name.monkey.retromusic.glide.SongGlideRequest;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteWrapper;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.helper.SortOrder.AlbumSongSortOrder;
-import code.name.monkey.retromusic.model.Album;
-import code.name.monkey.retromusic.model.Song;
-import code.name.monkey.retromusic.mvp.contract.AlbumDetailsContract;
-import code.name.monkey.retromusic.mvp.presenter.AlbumDetailsPresenter;
+
+
 import code.name.monkey.retromusic.ui.activities.base.AbsSlidingMusicPanelActivity;
 import code.name.monkey.retromusic.ui.activities.tageditor.AbsTagEditorActivity;
 import code.name.monkey.retromusic.ui.activities.tageditor.AlbumTagEditorActivity;

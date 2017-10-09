@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 
+import com.retro.musicplayer.backend.loaders.SongLoader;
+import com.retro.musicplayer.backend.model.Song;
+
 import java.util.ArrayList;
 
-import code.name.monkey.retromusic.loaders.SongLoader;
-import code.name.monkey.retromusic.model.Song;
+
 
 /**
  * @author Karim Abou Zeid (kabouzeid)

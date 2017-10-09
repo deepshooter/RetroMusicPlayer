@@ -27,6 +27,10 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.util.TintHelper;
+import com.retro.musicplayer.backend.model.Artist;
+import com.retro.musicplayer.backend.model.Song;
+import com.retro.musicplayer.backend.mvp.contract.ArtistDetailContract;
+import com.retro.musicplayer.backend.mvp.presenter.ArtistDetailsPresenter;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -43,10 +47,7 @@ import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.helper.SortOrder.ArtistSongSortOrder;
 import code.name.monkey.retromusic.lastfm.rest.LastFMRestClient;
 import code.name.monkey.retromusic.lastfm.rest.model.LastFmArtist;
-import code.name.monkey.retromusic.model.Artist;
-import code.name.monkey.retromusic.model.Song;
-import code.name.monkey.retromusic.mvp.contract.ArtistDetailContract;
-import code.name.monkey.retromusic.mvp.presenter.ArtistDetailsPresenter;
+
 import code.name.monkey.retromusic.ui.activities.base.AbsSlidingMusicPanelActivity;
 import code.name.monkey.retromusic.ui.adapter.artist.ArtistDetailAdapter;
 import code.name.monkey.retromusic.util.CustomArtistImageUtil;

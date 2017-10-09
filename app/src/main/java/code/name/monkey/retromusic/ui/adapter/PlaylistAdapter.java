@@ -13,6 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
+import com.retro.musicplayer.backend.loaders.PlaylistSongsLoader;
+import com.retro.musicplayer.backend.model.AbsCustomPlaylist;
+import com.retro.musicplayer.backend.model.Playlist;
+import com.retro.musicplayer.backend.model.Song;
+import com.retro.musicplayer.backend.model.smartplaylist.AbsSmartPlaylist;
+import com.retro.musicplayer.backend.model.smartplaylist.LastAddedPlaylist;
 import com.stfalcon.multiimageview.MultiImageView;
 
 import java.util.ArrayList;
@@ -28,12 +34,6 @@ import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.helper.menu.PlaylistMenuHelper;
 import code.name.monkey.retromusic.helper.menu.SongsMenuHelper;
 import code.name.monkey.retromusic.interfaces.CabHolder;
-import code.name.monkey.retromusic.loaders.PlaylistSongsLoader;
-import code.name.monkey.retromusic.model.AbsCustomPlaylist;
-import code.name.monkey.retromusic.model.Playlist;
-import code.name.monkey.retromusic.model.Song;
-import code.name.monkey.retromusic.model.smartplaylist.AbsSmartPlaylist;
-import code.name.monkey.retromusic.model.smartplaylist.LastAddedPlaylist;
 import code.name.monkey.retromusic.ui.adapter.base.AbsMultiSelectAdapter;
 import code.name.monkey.retromusic.ui.adapter.base.MediaEntryViewHolder;
 import code.name.monkey.retromusic.util.MusicUtil;

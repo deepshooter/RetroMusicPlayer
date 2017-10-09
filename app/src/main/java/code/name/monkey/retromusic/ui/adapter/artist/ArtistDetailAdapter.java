@@ -8,13 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
+import com.retro.musicplayer.backend.model.Album;
+import com.retro.musicplayer.backend.model.Song;
 
 import java.util.ArrayList;
 
 import butterknife.ButterKnife;
 import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.model.Album;
-import code.name.monkey.retromusic.model.Song;
+
+
 import code.name.monkey.retromusic.ui.adapter.HorizontalAlbumAdapter;
 import code.name.monkey.retromusic.ui.adapter.base.MediaEntryViewHolder;
 import code.name.monkey.retromusic.ui.adapter.song.SimpleSongAdapter;

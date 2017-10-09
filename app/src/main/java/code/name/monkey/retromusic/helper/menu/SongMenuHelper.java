@@ -8,13 +8,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 
+import com.retro.musicplayer.backend.model.Song;
+
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.dialogs.AddToPlaylistDialog;
 import code.name.monkey.retromusic.dialogs.DeleteSongsDialog;
 import code.name.monkey.retromusic.dialogs.SongDetailDialog;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.interfaces.PaletteColorHolder;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.ui.activities.tageditor.AbsTagEditorActivity;
 import code.name.monkey.retromusic.ui.activities.tageditor.SongTagEditorActivity;
 import code.name.monkey.retromusic.util.MusicUtil;

@@ -6,6 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.retro.musicplayer.backend.loaders.PlaylistSongsLoader;
+import com.retro.musicplayer.backend.model.AbsCustomPlaylist;
+import com.retro.musicplayer.backend.model.Playlist;
+import com.retro.musicplayer.backend.model.Song;
+
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.R;
@@ -13,10 +18,7 @@ import code.name.monkey.retromusic.dialogs.AddToPlaylistDialog;
 import code.name.monkey.retromusic.dialogs.DeletePlaylistDialog;
 import code.name.monkey.retromusic.dialogs.RenamePlaylistDialog;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
-import code.name.monkey.retromusic.loaders.PlaylistSongsLoader;
-import code.name.monkey.retromusic.model.AbsCustomPlaylist;
-import code.name.monkey.retromusic.model.Playlist;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.util.PlaylistsUtil;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;

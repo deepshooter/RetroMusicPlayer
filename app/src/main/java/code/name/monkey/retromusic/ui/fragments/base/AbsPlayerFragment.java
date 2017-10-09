@@ -7,6 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.retro.musicplayer.backend.model.Song;
+
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.dialogs.AddToPlaylistDialog;
 import code.name.monkey.retromusic.dialogs.CreatePlaylistDialog;
@@ -16,7 +18,7 @@ import code.name.monkey.retromusic.dialogs.SongDetailDialog;
 import code.name.monkey.retromusic.dialogs.SongShareDialog;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.interfaces.PaletteColorHolder;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.ui.activities.tageditor.AbsTagEditorActivity;
 import code.name.monkey.retromusic.ui.activities.tageditor.SongTagEditorActivity;
 import code.name.monkey.retromusic.ui.fragments.player.PlayerAlbumCoverFragment;

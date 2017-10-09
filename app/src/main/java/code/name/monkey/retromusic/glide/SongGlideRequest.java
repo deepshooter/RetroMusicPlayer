@@ -12,12 +12,12 @@ import com.bumptech.glide.load.Key;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.signature.MediaStoreSignature;
+import com.retro.musicplayer.backend.model.Song;
 
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.glide.audiocover.AudioFileCover;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteTranscoder;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteWrapper;
-import code.name.monkey.retromusic.model.Song;
 import code.name.monkey.retromusic.util.MusicUtil;
 import code.name.monkey.retromusic.util.PreferenceUtil;
 /**

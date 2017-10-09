@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.retro.musicplayer.backend.model.Song;
 
 import org.jaudiotagger.audio.AudioFile;
 import org.jaudiotagger.audio.AudioFileIO;
@@ -26,7 +27,7 @@ import java.io.File;
 import java.io.IOException;
 
 import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.util.MusicUtil;
 
 /**

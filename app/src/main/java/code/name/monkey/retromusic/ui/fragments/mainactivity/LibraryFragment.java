@@ -23,6 +23,7 @@ import com.afollestad.materialcab.MaterialCab;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
 import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
+import com.retro.musicplayer.backend.loaders.SongLoader;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,7 +35,6 @@ import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.interfaces.CabHolder;
 import code.name.monkey.retromusic.interfaces.LibraryTabSelectedItem;
 import code.name.monkey.retromusic.interfaces.MainActivityFragmentCallbacks;
-import code.name.monkey.retromusic.loaders.SongLoader;
 import code.name.monkey.retromusic.ui.activities.SearchActivity;
 import code.name.monkey.retromusic.ui.fragments.base.AbsLibraryPagerRecyclerViewCustomGridSizeFragment;
 import code.name.monkey.retromusic.ui.fragments.base.AbsMainActivityFragment;

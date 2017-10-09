@@ -2,13 +2,15 @@ package code.name.monkey.retromusic.helper;
 
 import android.content.Context;
 
+import com.retro.musicplayer.backend.loaders.PlaylistSongsLoader;
+import com.retro.musicplayer.backend.model.Playlist;
+import com.retro.musicplayer.backend.model.Song;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
-import code.name.monkey.retromusic.loaders.PlaylistSongsLoader;
-import code.name.monkey.retromusic.model.Playlist;
-import code.name.monkey.retromusic.model.Song;
+
 import io.reactivex.Observable;
 
 public class M3UWriter implements M3UConstants {

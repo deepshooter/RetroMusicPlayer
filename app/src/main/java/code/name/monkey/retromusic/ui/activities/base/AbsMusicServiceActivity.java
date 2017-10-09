@@ -18,7 +18,14 @@ import java.util.ArrayList;
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.interfaces.MusicServiceEventListener;
-import code.name.monkey.retromusic.service.MusicService;
+
+import static com.retro.musicplayer.backend.RetroConstants.MEDIA_STORE_CHANGED;
+import static com.retro.musicplayer.backend.RetroConstants.META_CHANGED;
+import static com.retro.musicplayer.backend.RetroConstants.PLAY_STATE_CHANGED;
+import static com.retro.musicplayer.backend.RetroConstants.QUEUE_CHANGED;
+import static com.retro.musicplayer.backend.RetroConstants.REPEAT_MODE_CHANGED;
+import static com.retro.musicplayer.backend.RetroConstants.SHUFFLE_MODE_CHANGED;
+
 /**
  * @author Karim Abou Zeid (kabouzeid)
  */
@@ -78,12 +85,12 @@ public abstract class AbsMusicServiceActivity extends AbsBaseActivity implements
             musicStateReceiver = new MusicStateReceiver(this);
 
             final IntentFilter filter = new IntentFilter();
-            filter.addAction(MusicService.PLAY_STATE_CHANGED);
-            filter.addAction(MusicService.SHUFFLE_MODE_CHANGED);
-            filter.addAction(MusicService.REPEAT_MODE_CHANGED);
-            filter.addAction(MusicService.META_CHANGED);
-            filter.addAction(MusicService.QUEUE_CHANGED);
-            filter.addAction(MusicService.MEDIA_STORE_CHANGED);
+            filter.addAction(PLAY_STATE_CHANGED);
+            filter.addAction(SHUFFLE_MODE_CHANGED);
+            filter.addAction(REPEAT_MODE_CHANGED);
+            filter.addAction(META_CHANGED);
+            filter.addAction(QUEUE_CHANGED);
+            filter.addAction(MEDIA_STORE_CHANGED);
 
             registerReceiver(musicStateReceiver, filter);
 
@@ -165,6 +172,20 @@ public abstract class AbsMusicServiceActivity extends AbsBaseActivity implements
         }
     }
 
+    @Override
+    protected void onHasPermissionsChanged(boolean hasPermissions) {
+        super.onHasPermissionsChanged(hasPermissions);
+        Intent intent = new Intent(MEDIA_STORE_CHANGED);
+        intent.putExtra("from_permissions_changed", true); // just in case we need to know this at some point
+        sendBroadcast(intent);
+    }
+
+    @Nullable
+    @Override
+    protected String[] getPermissionsToRequest() {
+        return new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+    }
+
     private static final class MusicStateReceiver extends BroadcastReceiver {
 
         private final WeakReference<AbsMusicServiceActivity> reference;
@@ -179,40 +200,26 @@ public abstract class AbsMusicServiceActivity extends AbsBaseActivity implements
             AbsMusicServiceActivity activity = reference.get();
             if (activity != null) {
                 switch (action) {
-                    case MusicService.META_CHANGED:
+                    case META_CHANGED:
                         activity.onPlayingMetaChanged();
                         break;
-                    case MusicService.QUEUE_CHANGED:
+                    case QUEUE_CHANGED:
                         activity.onQueueChanged();
                         break;
-                    case MusicService.PLAY_STATE_CHANGED:
+                    case PLAY_STATE_CHANGED:
                         activity.onPlayStateChanged();
                         break;
-                    case MusicService.REPEAT_MODE_CHANGED:
+                    case REPEAT_MODE_CHANGED:
                         activity.onRepeatModeChanged();
                         break;
-                    case MusicService.SHUFFLE_MODE_CHANGED:
+                    case SHUFFLE_MODE_CHANGED:
                         activity.onShuffleModeChanged();
                         break;
-                    case MusicService.MEDIA_STORE_CHANGED:
+                    case MEDIA_STORE_CHANGED:
                         activity.onMediaStoreChanged();
                         break;
                 }
             }
         }
-    }
-
-    @Override
-    protected void onHasPermissionsChanged(boolean hasPermissions) {
-        super.onHasPermissionsChanged(hasPermissions);
-        Intent intent = new Intent(MusicService.MEDIA_STORE_CHANGED);
-        intent.putExtra("from_permissions_changed", true); // just in case we need to know this at some point
-        sendBroadcast(intent);
-    }
-
-    @Nullable
-    @Override
-    protected String[] getPermissionsToRequest() {
-        return new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
     }
 }

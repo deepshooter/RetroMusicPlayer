@@ -11,6 +11,8 @@ import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemAdapter;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.DraggableItemViewHolder;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.ItemDraggableRange;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.annotation.DraggableItemStateFlags;
+import com.retro.musicplayer.backend.model.PlaylistSong;
+import com.retro.musicplayer.backend.model.Song;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +20,6 @@ import java.util.List;
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.dialogs.RemoveFromPlaylistDialog;
 import code.name.monkey.retromusic.interfaces.CabHolder;
-import code.name.monkey.retromusic.model.PlaylistSong;
-import code.name.monkey.retromusic.model.Song;
 import code.name.monkey.retromusic.util.ViewUtil;
 
 /**

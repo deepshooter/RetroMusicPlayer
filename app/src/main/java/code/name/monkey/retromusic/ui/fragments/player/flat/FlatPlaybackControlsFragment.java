@@ -20,6 +20,7 @@ import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.kabouzeid.appthemehelper.util.TintHelper;
+import com.retro.musicplayer.backend.model.Song;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,7 +31,7 @@ import code.name.monkey.retromusic.helper.MusicProgressViewUpdateHelper;
 import code.name.monkey.retromusic.helper.MusicProgressViewUpdateHelper.Callback;
 import code.name.monkey.retromusic.helper.PlayPauseButtonOnClickHandler;
 import code.name.monkey.retromusic.misc.SimpleOnSeekbarChangeListener;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.service.MusicService;
 import code.name.monkey.retromusic.ui.fragments.base.AbsMusicServiceFragment;
 import code.name.monkey.retromusic.util.MusicUtil;

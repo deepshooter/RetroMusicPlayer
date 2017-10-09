@@ -8,6 +8,8 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.StyleRes;
 
+import com.retro.musicplayer.backend.util.FileUtil;
+
 import java.io.File;
 
 import code.name.monkey.retromusic.R;

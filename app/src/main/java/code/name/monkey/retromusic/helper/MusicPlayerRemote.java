@@ -18,14 +18,15 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
+import com.retro.musicplayer.backend.loaders.SongLoader;
+import com.retro.musicplayer.backend.model.Song;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.WeakHashMap;
 
 import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.loaders.SongLoader;
-import code.name.monkey.retromusic.model.Song;
 import code.name.monkey.retromusic.service.MusicService;
 import io.reactivex.schedulers.Schedulers;
 

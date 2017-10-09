@@ -9,13 +9,13 @@ import android.view.View;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.retro.musicplayer.backend.providers.BlacklistStore;
 
 import java.io.File;
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.dialogs.BlacklistFolderChooserDialog;
-import code.name.monkey.retromusic.providers.BlacklistStore;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)

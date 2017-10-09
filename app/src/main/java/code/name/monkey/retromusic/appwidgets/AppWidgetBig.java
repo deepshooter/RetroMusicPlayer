@@ -5,6 +5,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
@@ -17,14 +18,16 @@ import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
 import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
+import com.retro.musicplayer.backend.model.Song;
 
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.glide.SongGlideRequest;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.service.MusicService;
 import code.name.monkey.retromusic.ui.activities.MainActivity;
 import code.name.monkey.retromusic.util.Util;
 
+import static com.retro.musicplayer.backend.RetroConstants.*;
 public class AppWidgetBig extends BaseAppWidget {
     public static final String NAME = "app_widget_big";
 
@@ -138,15 +141,15 @@ public class AppWidgetBig extends BaseAppWidget {
         views.setOnClickPendingIntent(R.id.clickable_area, pendingIntent);
 
         // Previous track
-        pendingIntent = buildPendingIntent(context, MusicService.ACTION_REWIND, serviceName);
+        pendingIntent = buildPendingIntent(context,  ACTION_REWIND, serviceName);
         views.setOnClickPendingIntent(R.id.button_prev, pendingIntent);
 
         // Play and pause
-        pendingIntent = buildPendingIntent(context, MusicService.ACTION_TOGGLE_PAUSE, serviceName);
+        pendingIntent = buildPendingIntent(context, ACTION_TOGGLE_PAUSE, serviceName);
         views.setOnClickPendingIntent(R.id.button_toggle_play_pause, pendingIntent);
 
         // Next track
-        pendingIntent = buildPendingIntent(context, MusicService.ACTION_SKIP, serviceName);
+        pendingIntent = buildPendingIntent(context,  ACTION_SKIP, serviceName);
         views.setOnClickPendingIntent(R.id.button_next, pendingIntent);
     }
 }

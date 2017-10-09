@@ -8,13 +8,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 
+import com.retro.musicplayer.backend.model.Playlist;
+import com.retro.musicplayer.backend.mvp.contract.PlaylistContract;
+import com.retro.musicplayer.backend.mvp.presenter.PlaylistPresenter;
+
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.Injection;
 import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.model.Playlist;
-import code.name.monkey.retromusic.mvp.contract.PlaylistContract;
-import code.name.monkey.retromusic.mvp.presenter.PlaylistPresenter;
 import code.name.monkey.retromusic.ui.adapter.PlaylistAdapter;
 import code.name.monkey.retromusic.ui.fragments.base.AbsLibraryPagerRecyclerViewFragment;
 import code.name.monkey.retromusic.util.Util;
@@ -23,7 +24,9 @@ import code.name.monkey.retromusic.util.Util;
  * Created by hemanths on 19/08/17.
  */
 
-public class PlaylistsFragment extends AbsLibraryPagerRecyclerViewFragment<PlaylistAdapter, GridLayoutManager> implements PlaylistContract.PlaylistView {
+public class PlaylistsFragment
+        extends AbsLibraryPagerRecyclerViewFragment<PlaylistAdapter, GridLayoutManager>
+        implements PlaylistContract.PlaylistView {
     private PlaylistPresenter mPlaylistPresenter;
 
     public static PlaylistsFragment newInstance() {

@@ -12,15 +12,17 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
+import com.retro.musicplayer.backend.model.Playlist;
+import com.retro.musicplayer.backend.model.PlaylistSong;
+import com.retro.musicplayer.backend.model.Song;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.helper.M3UWriter;
-import code.name.monkey.retromusic.model.Playlist;
-import code.name.monkey.retromusic.model.PlaylistSong;
-import code.name.monkey.retromusic.model.Song;
+
 import io.reactivex.Observable;
 
 import static android.provider.MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI;

@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.retro.musicplayer.backend.model.Song;
+
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.interfaces.CabHolder;
-import code.name.monkey.retromusic.model.Song;
+
 /**
  * @author Eugene Cheung (arkon)
  */

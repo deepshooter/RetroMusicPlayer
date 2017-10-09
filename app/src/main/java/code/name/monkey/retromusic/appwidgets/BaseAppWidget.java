@@ -19,10 +19,13 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
 
+import com.retro.musicplayer.backend.model.Song;
+
 import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.service.MusicService;
 
+import static com.retro.musicplayer.backend.RetroConstants.*;
 
 public abstract class BaseAppWidget extends AppWidgetProvider {
     public static final String NAME = "app_widget";
@@ -34,8 +37,8 @@ public abstract class BaseAppWidget extends AppWidgetProvider {
     public void onUpdate(final Context context, final AppWidgetManager appWidgetManager,
                          final int[] appWidgetIds) {
         defaultAppWidget(context, appWidgetIds);
-        final Intent updateIntent = new Intent(MusicService.APP_WIDGET_UPDATE);
-        updateIntent.putExtra(MusicService.EXTRA_APP_WIDGET_NAME, NAME);
+        final Intent updateIntent = new Intent( APP_WIDGET_UPDATE);
+        updateIntent.putExtra( EXTRA_APP_WIDGET_NAME, NAME);
         updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds);
         updateIntent.addFlags(Intent.FLAG_RECEIVER_REGISTERED_ONLY);
         context.sendBroadcast(updateIntent);
@@ -47,7 +50,7 @@ public abstract class BaseAppWidget extends AppWidgetProvider {
      */
     public void notifyChange(final MusicService service, final String what) {
         if (hasInstances(service)) {
-            if (MusicService.META_CHANGED.equals(what) || MusicService.PLAY_STATE_CHANGED.equals(what)) {
+            if ( META_CHANGED.equals(what) ||  PLAY_STATE_CHANGED.equals(what)) {
                 performUpdate(service, null);
             }
         }

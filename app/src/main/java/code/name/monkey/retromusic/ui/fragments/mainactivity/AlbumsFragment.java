@@ -11,14 +11,15 @@ import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
 
+import com.retro.musicplayer.backend.model.Album;
+import com.retro.musicplayer.backend.mvp.contract.AlbumContract;
+import com.retro.musicplayer.backend.mvp.presenter.AlbumPresenter;
+
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.Injection;
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.helper.SortOrder.AlbumSortOrder;
-import code.name.monkey.retromusic.model.Album;
-import code.name.monkey.retromusic.mvp.contract.AlbumContract;
-import code.name.monkey.retromusic.mvp.presenter.AlbumPresenter;
 import code.name.monkey.retromusic.ui.adapter.album.AlbumAdapter;
 import code.name.monkey.retromusic.ui.fragments.base.AbsLibraryPagerRecyclerViewCustomGridSizeFragment;
 import code.name.monkey.retromusic.util.PreferenceUtil;

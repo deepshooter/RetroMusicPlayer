@@ -2,12 +2,13 @@ package code.name.monkey.retromusic.util;
 
 import android.content.Context;
 
+import com.retro.musicplayer.backend.model.Song;
+import com.retro.musicplayer.backend.util.schedulers.BaseSchedulerProvider;
+
 import code.name.monkey.retromusic.Injection;
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.lastfm.rest.KygouClient;
 import code.name.monkey.retromusic.lastfm.rest.model.KuGouSearchLyricResult;
-import code.name.monkey.retromusic.model.Song;
-import code.name.monkey.retromusic.util.schedulers.BaseSchedulerProvider;
 import io.reactivex.Observable;
 
 /**
@@ -39,7 +40,7 @@ public class KuGouUtils {
 
     public Observable<KuGouSearchLyricResult> load() {
         long duration = MusicPlayerRemote.getSongDurationMillis();
-       return mKygouClient.getApiService().searchLyric(mSong.title, String.valueOf(duration));
+        return mKygouClient.getApiService().searchLyric(mSong.title, String.valueOf(duration));
     }
 
     private void parseKugouResult(KuGouSearchLyricResult kuGouSearchLyricResult) {

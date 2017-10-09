@@ -38,6 +38,13 @@ import com.bumptech.glide.BitmapRequestBuilder;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.retro.musicplayer.backend.loaders.PlaylistSongsLoader;
+import com.retro.musicplayer.backend.model.AbsCustomPlaylist;
+import com.retro.musicplayer.backend.model.Playlist;
+import com.retro.musicplayer.backend.model.Song;
+import com.retro.musicplayer.backend.providers.HistoryStore;
+import com.retro.musicplayer.backend.providers.MusicPlaybackQueueStore;
+import com.retro.musicplayer.backend.providers.SongPlayCountStore;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -53,13 +60,6 @@ import code.name.monkey.retromusic.glide.BlurTransformation;
 import code.name.monkey.retromusic.glide.SongGlideRequest;
 import code.name.monkey.retromusic.helper.ShuffleHelper;
 import code.name.monkey.retromusic.helper.StopWatch;
-import code.name.monkey.retromusic.loaders.PlaylistSongsLoader;
-import code.name.monkey.retromusic.model.AbsCustomPlaylist;
-import code.name.monkey.retromusic.model.Playlist;
-import code.name.monkey.retromusic.model.Song;
-import code.name.monkey.retromusic.providers.HistoryStore;
-import code.name.monkey.retromusic.providers.MusicPlaybackQueueStore;
-import code.name.monkey.retromusic.providers.SongPlayCountStore;
 import code.name.monkey.retromusic.service.notification.PlayingNotification;
 import code.name.monkey.retromusic.service.notification.PlayingNotificationImpl;
 import code.name.monkey.retromusic.service.notification.PlayingNotificationImpl24;
@@ -68,37 +68,33 @@ import code.name.monkey.retromusic.util.MusicUtil;
 import code.name.monkey.retromusic.util.PreferenceUtil;
 import code.name.monkey.retromusic.util.Util;
 
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_PAUSE;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_PLAY;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_PLAY_PLAYLIST;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_QUIT;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_REWIND;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_SKIP;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_STOP;
+import static com.retro.musicplayer.backend.RetroConstants.ACTION_TOGGLE_PAUSE;
+import static com.retro.musicplayer.backend.RetroConstants.APP_WIDGET_UPDATE;
+import static com.retro.musicplayer.backend.RetroConstants.EXTRA_APP_WIDGET_NAME;
+import static com.retro.musicplayer.backend.RetroConstants.INTENT_EXTRA_PLAYLIST;
+import static com.retro.musicplayer.backend.RetroConstants.INTENT_EXTRA_SHUFFLE_MODE;
+import static com.retro.musicplayer.backend.RetroConstants.MEDIA_STORE_CHANGED;
+import static com.retro.musicplayer.backend.RetroConstants.META_CHANGED;
+import static com.retro.musicplayer.backend.RetroConstants.MUSIC_PACKAGE_NAME;
+import static com.retro.musicplayer.backend.RetroConstants.PLAY_STATE_CHANGED;
+import static com.retro.musicplayer.backend.RetroConstants.QUEUE_CHANGED;
+import static com.retro.musicplayer.backend.RetroConstants.REPEAT_MODE_CHANGED;
+import static com.retro.musicplayer.backend.RetroConstants.RETRO_MUSIC_PACKAGE_NAME;
+import static com.retro.musicplayer.backend.RetroConstants.SHUFFLE_MODE_CHANGED;
+
 /**
  * @author Karim Abou Zeid (kabouzeid), Andrew Neal
  */
 public class MusicService extends Service implements SharedPreferences.OnSharedPreferenceChangeListener, Playback.PlaybackCallbacks {
     public static final String TAG = MusicService.class.getSimpleName();
 
-    public static final String RETRO_MUSIC_PACKAGE_NAME = "code.name.monkey.retromusic" + ".temp_sticky_intent_fix"; // TODO remove ".temp_sticky_intent_fix" in a future update.
-    public static final String MUSIC_PACKAGE_NAME = "com.android.music";
-
-    public static final String ACTION_TOGGLE_PAUSE = RETRO_MUSIC_PACKAGE_NAME + ".togglepause";
-    public static final String ACTION_PLAY = RETRO_MUSIC_PACKAGE_NAME + ".play";
-    public static final String ACTION_PLAY_PLAYLIST = RETRO_MUSIC_PACKAGE_NAME + ".play.playlist";
-    public static final String ACTION_PAUSE = RETRO_MUSIC_PACKAGE_NAME + ".pause";
-    public static final String ACTION_STOP = RETRO_MUSIC_PACKAGE_NAME + ".stop";
-    public static final String ACTION_SKIP = RETRO_MUSIC_PACKAGE_NAME + ".skip";
-    public static final String ACTION_REWIND = RETRO_MUSIC_PACKAGE_NAME + ".rewind";
-    public static final String ACTION_QUIT = RETRO_MUSIC_PACKAGE_NAME + ".quitservice";
-    public static final String INTENT_EXTRA_PLAYLIST = RETRO_MUSIC_PACKAGE_NAME + "intentextra.playlist";
-    public static final String INTENT_EXTRA_SHUFFLE_MODE = RETRO_MUSIC_PACKAGE_NAME + ".intentextra.shufflemode";
-
-    public static final String APP_WIDGET_UPDATE = RETRO_MUSIC_PACKAGE_NAME + ".appwidgetupdate";
-    public static final String EXTRA_APP_WIDGET_NAME = RETRO_MUSIC_PACKAGE_NAME + "app_widget_name";
-
-    // do not change these three strings as it will break support with other apps (e.g. last.fm scrobbling)
-    public static final String META_CHANGED = RETRO_MUSIC_PACKAGE_NAME + ".metachanged";
-    public static final String QUEUE_CHANGED = RETRO_MUSIC_PACKAGE_NAME + ".queuechanged";
-    public static final String PLAY_STATE_CHANGED = RETRO_MUSIC_PACKAGE_NAME + ".playstatechanged";
-
-    public static final String REPEAT_MODE_CHANGED = RETRO_MUSIC_PACKAGE_NAME + ".repeatmodechanged";
-    public static final String SHUFFLE_MODE_CHANGED = RETRO_MUSIC_PACKAGE_NAME + ".shufflemodechanged";
-    public static final String MEDIA_STORE_CHANGED = RETRO_MUSIC_PACKAGE_NAME + ".mediastorechanged";
 
     public static final String SAVED_POSITION = "POSITION";
     public static final String SAVED_POSITION_IN_TRACK = "POSITION_IN_TRACK";

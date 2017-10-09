@@ -6,7 +6,8 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import code.name.monkey.retromusic.model.lyrics.Lyrics;
+import com.retro.musicplayer.backend.model.lyrics.Lyrics;
+
 
 /**
  * @author Karim Abou Zeid (kabouzeid)

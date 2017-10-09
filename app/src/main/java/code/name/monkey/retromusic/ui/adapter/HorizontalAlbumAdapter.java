@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
+import com.retro.musicplayer.backend.model.Album;
 
 import java.util.ArrayList;
 
@@ -17,7 +18,7 @@ import code.name.monkey.retromusic.glide.RetroMusicColoredTarget;
 import code.name.monkey.retromusic.glide.SongGlideRequest;
 import code.name.monkey.retromusic.helper.HorizontalAdapterHelper;
 import code.name.monkey.retromusic.interfaces.CabHolder;
-import code.name.monkey.retromusic.model.Album;
+
 import code.name.monkey.retromusic.ui.adapter.album.AlbumAdapter;
 
 /**

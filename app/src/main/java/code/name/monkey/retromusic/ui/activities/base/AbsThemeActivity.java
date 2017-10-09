@@ -33,7 +33,7 @@ public abstract class AbsThemeActivity extends ATHToolbarActivity {
         if (!ThemeStore.isConfigured(this, 1)) {
             ThemeStore.editTheme(this)
                     .activityTheme(R.style.Theme_RetroMusic_Light)
-                    .accentColorRes(R.color.md_blue_A200)
+                    .accentColorRes(R.color.md_green_A200)
                     .commit();
         }
         getSharedPreferences("[[kabouzeid_app-theme-helper]]", 0)

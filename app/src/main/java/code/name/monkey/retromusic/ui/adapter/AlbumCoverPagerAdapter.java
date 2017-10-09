@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.retro.musicplayer.backend.model.Song;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,7 @@ import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.glide.RetroMusicColoredTarget;
 import code.name.monkey.retromusic.glide.SongGlideRequest;
 import code.name.monkey.retromusic.misc.CustomFragmentStatePagerAdapter;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.ui.activities.LyricsActivity;
 import code.name.monkey.retromusic.util.PreferenceUtil;
 

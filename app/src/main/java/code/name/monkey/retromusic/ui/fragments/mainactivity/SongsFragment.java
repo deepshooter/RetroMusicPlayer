@@ -12,14 +12,15 @@ import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
 
+import com.retro.musicplayer.backend.model.Song;
+import com.retro.musicplayer.backend.mvp.contract.SongContract;
+import com.retro.musicplayer.backend.mvp.presenter.SongPresenter;
+
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.Injection;
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.helper.SortOrder.SongSortOrder;
-import code.name.monkey.retromusic.model.Song;
-import code.name.monkey.retromusic.mvp.contract.SongContract;
-import code.name.monkey.retromusic.mvp.presenter.SongPresenter;
 import code.name.monkey.retromusic.ui.adapter.song.ShuffleButtonSongAdapter;
 import code.name.monkey.retromusic.ui.adapter.song.SongAdapter;
 import code.name.monkey.retromusic.ui.fragments.base.AbsLibraryPagerRecyclerViewCustomGridSizeFragment;
@@ -28,7 +29,9 @@ import code.name.monkey.retromusic.util.PreferenceUtil;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SongsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFragment<SongAdapter, GridLayoutManager> implements SongContract.SongView {
+public class SongsFragment
+        extends AbsLibraryPagerRecyclerViewCustomGridSizeFragment<SongAdapter, GridLayoutManager>
+        implements SongContract.SongView {
     private static final String TAG = "Songs";
     private SongPresenter songPresenter;
 

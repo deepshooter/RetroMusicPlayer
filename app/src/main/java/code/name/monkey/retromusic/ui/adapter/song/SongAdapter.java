@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.afollestad.materialcab.MaterialCab;
 import com.bumptech.glide.Glide;
+import com.retro.musicplayer.backend.model.Song;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.helper.menu.SongMenuHelper;
 import code.name.monkey.retromusic.helper.menu.SongsMenuHelper;
 import code.name.monkey.retromusic.interfaces.CabHolder;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.ui.adapter.base.AbsMultiSelectAdapter;
 import code.name.monkey.retromusic.ui.adapter.base.MediaEntryViewHolder;
 import code.name.monkey.retromusic.util.MusicUtil;

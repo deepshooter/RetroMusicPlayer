@@ -25,6 +25,7 @@ import code.name.monkey.retromusic.service.MusicService;
 import code.name.monkey.retromusic.util.MusicUtil;
 import code.name.monkey.retromusic.util.PreferenceUtil;
 
+import static com.retro.musicplayer.backend.RetroConstants.*;
 /**
  * @author Karim Abou Zeid (kabouzeid)
  */
@@ -126,7 +127,7 @@ public class SleepTimerDialog extends DialogFragment {
 
     private Intent makeTimerIntent() {
         return new Intent(getActivity(), MusicService.class)
-                .setAction(MusicService.ACTION_QUIT);
+                .setAction( ACTION_QUIT);
     }
 
     private class TimerUpdater extends CountDownTimer {

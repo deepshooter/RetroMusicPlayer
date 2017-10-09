@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:id="@+id/playback_controls"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:paddingEnd="8dp"
-              android:paddingStart="8dp"
-              tools:ignore="MissingPrefix">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playback_controls"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingEnd="8dp"
+    android:paddingStart="8dp"
+    tools:ignore="MissingPrefix">
 
     <SeekBar
         android:id="@+id/player_progress_slider"
@@ -20,7 +20,7 @@
         android:progressDrawable="@drawable/color_progress_seek"
         android:splitTrack="false"
         android:thumb="@drawable/ic_action_thumb"
-        tools:progress="20"/>
+        tools:progress="20" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
             android:textColor="?android:attr/textColorSecondary"
             android:textSize="12sp"
             android:textStyle="bold"
-            tools:text="22.00"/>
+            tools:text="22.00" />
 
 
         <TextView
@@ -53,7 +53,7 @@
             android:textColor="?android:attr/textColorSecondary"
             android:textSize="12sp"
             android:textStyle="bold"
-            tools:text="22.00"/>
+            tools:text="22.00" />
     </LinearLayout>
 
     <TextView
@@ -68,7 +68,7 @@
         android:paddingStart="24dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="?android:attr/textColorPrimary"
-        tools:text="Title"/>
+        tools:text="Title" />
 
     <TextView
         android:id="@+id/text"
@@ -81,7 +81,7 @@
         android:maxLines="1"
         android:paddingEnd="24dp"
         android:paddingStart="24dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
     <RelativeLayout
         android:id="@+id/player_media_controller_container"
@@ -105,7 +105,7 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_skip_previous_white_24dp"
             tools:ignore="MissingPrefix"
-            tools:tint="@color/md_black_1000"/>
+            tools:tint="@color/md_black_1000" />
 
         <ImageButton
             android:id="@+id/player_next_button"
@@ -122,7 +122,7 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_skip_next_white_24dp"
             tools:ignore="MissingPrefix"
-            tools:tint="@color/md_black_1000"/>
+            tools:tint="@color/md_black_1000" />
 
         <ImageButton
             android:id="@+id/player_repeat_button"
@@ -137,7 +137,7 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_repeat_white_24dp"
             tools:ignore="MissingPrefix"
-            tools:tint="@color/md_black_1000"/>
+            tools:tint="@color/md_black_1000" />
 
         <ImageButton
             android:id="@+id/player_shuffle_button"
@@ -152,13 +152,13 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_shuffle_white_24dp"
             tools:ignore="MissingPrefix"
-            tools:tint="@color/md_black_1000"/>
+            tools:tint="@color/md_black_1000" />
 
         <Space
             android:id="@+id/dummy_fab"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true" />
 
         <ImageButton
             android:id="@+id/player_play_pause_fab"
@@ -169,7 +169,20 @@
             android:background="@drawable/color_circle_gradient"
             android:elevation="6dp"
             android:padding="16dp"
-            app:srcCompat="@drawable/ic_play_arrow_white_24dp"/>
+            app:srcCompat="@drawable/ic_play_arrow_white_24dp" />
 
     </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/volume_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/volume_fragment"
+            android:name="code.name.monkey.retromusic.ui.fragments.VolumeFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_volume" />
+    </FrameLayout>
 </LinearLayout>

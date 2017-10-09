@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.TintHelper;
 import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
+import com.retro.musicplayer.backend.loaders.SongLoader;
 
 import org.jaudiotagger.tag.FieldKey;
 
@@ -37,7 +38,6 @@ import code.name.monkey.retromusic.lastfm.rest.model.LastFmTrack.Track.Album;
 import code.name.monkey.retromusic.lastfm.rest.model.LastFmTrack.Track.Album.Attr;
 import code.name.monkey.retromusic.lastfm.rest.model.LastFmTrack.Track.Toptags;
 import code.name.monkey.retromusic.lastfm.rest.model.LastFmTrack.Track.Wiki;
-import code.name.monkey.retromusic.loaders.SongLoader;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 

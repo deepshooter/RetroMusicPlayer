@@ -9,12 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.kabouzeid.appthemehelper.ThemeStore;
+import com.retro.musicplayer.backend.model.Song;
 
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.interfaces.CabHolder;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.util.MusicUtil;
 import code.name.monkey.retromusic.util.NavigationUtil;
 

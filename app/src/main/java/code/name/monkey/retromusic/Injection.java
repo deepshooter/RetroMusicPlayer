@@ -3,10 +3,11 @@ package code.name.monkey.retromusic;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import code.name.monkey.retromusic.providers.RepositoryImpl;
-import code.name.monkey.retromusic.providers.interfaces.Repository;
-import code.name.monkey.retromusic.util.schedulers.BaseSchedulerProvider;
-import code.name.monkey.retromusic.util.schedulers.SchedulerProvider;
+import com.retro.musicplayer.backend.providers.RepositoryImpl;
+import com.retro.musicplayer.backend.providers.interfaces.Repository;
+import com.retro.musicplayer.backend.util.schedulers.BaseSchedulerProvider;
+import com.retro.musicplayer.backend.util.schedulers.SchedulerProvider;
+
 
 /**
  * Created by hemanths on 12/08/17.

@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.retro.musicplayer.backend.model.Song;
+
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.helper.MusicPlayerRemote;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.util.MusicUtil;
 
 /**

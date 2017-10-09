@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,9 +23,12 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
+import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.kabouzeid.appthemehelper.util.ToolbarContentTintHelper;
+import com.retro.musicplayer.backend.model.Playlist;
+import com.retro.musicplayer.backend.mvp.contract.HomeContract;
+import com.retro.musicplayer.backend.mvp.presenter.HomePresenter;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -37,13 +42,12 @@ import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.dialogs.SleepTimerDialog;
 import code.name.monkey.retromusic.interfaces.LibraryTabSelectedItem;
 import code.name.monkey.retromusic.interfaces.MainActivityFragmentCallbacks;
-import code.name.monkey.retromusic.model.Playlist;
-import code.name.monkey.retromusic.mvp.contract.HomeContract;
-import code.name.monkey.retromusic.mvp.presenter.HomePresenter;
+import code.name.monkey.retromusic.misc.AppBarStateChangeListener;
 import code.name.monkey.retromusic.ui.activities.SearchActivity;
 import code.name.monkey.retromusic.ui.adapter.home.HomeAdapter;
 import code.name.monkey.retromusic.ui.fragments.base.AbsMainActivityFragment;
 import code.name.monkey.retromusic.util.NavigationUtil;
+import code.name.monkey.retromusic.util.ToolbarColorizeHelper;
 
 import static code.name.monkey.retromusic.R.id.toolbar;
 
@@ -57,11 +61,7 @@ public class HomeFragment extends AbsMainActivityFragment
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
-    @BindView(R.id.root)
-    ViewGroup root;
     Unbinder unbinder;
-    @BindView(R.id.status_bar)
-    View mStatusBar;
     @BindView(toolbar)
     Toolbar mToolbar;
     @BindView(R.id.appbar)
@@ -70,8 +70,8 @@ public class HomeFragment extends AbsMainActivityFragment
     ImageView mImageView;
     @BindView(R.id.title)
     TextView mTitle;
-    @BindView(R.id.text)
-    TextView mText;
+    @BindView(R.id.collapsing_toolbar)
+    CollapsingToolbarLayout mToolbarLayout;
     private HomeAdapter adapter;
     private HomePresenter mHomePresenter;
 
@@ -148,9 +148,25 @@ public class HomeFragment extends AbsMainActivityFragment
     }
 
     private void setupToolbar() {
-        int primaryColor = ThemeStore.primaryColor(getActivity());
-        mAppbar.setBackgroundColor(primaryColor);
-        mToolbar.setBackgroundColor(primaryColor);
+        mAppbar.addOnOffsetChangedListener(new AppBarStateChangeListener() {
+            @Override
+            public void onStateChanged(AppBarLayout appBarLayout, State state) {
+                int color;
+                switch (state) {
+                    case COLLAPSED:
+                        color = ATHUtil.resolveColor(getContext(), R.attr.iconColor);
+                        break;
+                    default:
+                    case EXPANDED:
+                    case IDLE:
+                        color = ContextCompat.getColor(getContext(), R.color.md_white_1000);
+                        break;
+                }
+                mToolbarLayout.setExpandedTitleColor(color);
+                ToolbarColorizeHelper.colorizeToolbar(mToolbar, color, getActivity());
+            }
+
+        });
         mToolbar.setTitle(R.string.home);
         mToolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
         getActivity().setTitle(R.string.app_name);
@@ -176,9 +192,6 @@ public class HomeFragment extends AbsMainActivityFragment
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        recyclerView.setLayoutManager(null);
-        recyclerView.setAdapter(null);
-        recyclerView = null;
         unbinder.unbind();
     }
 

@@ -16,18 +16,18 @@ import android.text.TextUtils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.retro.musicplayer.backend.RetroConstants;
+import com.retro.musicplayer.backend.model.Song;
 
 import code.name.monkey.retromusic.R;
 import code.name.monkey.retromusic.glide.SongGlideRequest;
 import code.name.monkey.retromusic.glide.palette.BitmapPaletteWrapper;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.service.MusicService;
 import code.name.monkey.retromusic.ui.activities.MainActivity;
 import code.name.monkey.retromusic.util.PreferenceUtil;
 
-import static code.name.monkey.retromusic.service.MusicService.ACTION_REWIND;
-import static code.name.monkey.retromusic.service.MusicService.ACTION_SKIP;
-import static code.name.monkey.retromusic.service.MusicService.ACTION_TOGGLE_PAUSE;
+import static com.retro.musicplayer.backend.RetroConstants.*;
 
 /**
  * @author Karim Abou Zeid (kabouzeid)
@@ -55,7 +55,7 @@ public class PlayingNotificationImpl24 extends PlayingNotification {
         final PendingIntent clickIntent = PendingIntent.getActivity(service, 0, action, 0);
 
         final ComponentName serviceName = new ComponentName(service, MusicService.class);
-        Intent intent = new Intent(MusicService.ACTION_QUIT);
+        Intent intent = new Intent(RetroConstants.ACTION_QUIT);
         intent.setComponent(serviceName);
         final PendingIntent deleteIntent = PendingIntent.getService(service, 0, intent, 0);
 

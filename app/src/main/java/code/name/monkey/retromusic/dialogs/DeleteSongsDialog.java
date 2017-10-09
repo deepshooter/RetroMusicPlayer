@@ -8,11 +8,12 @@ import android.text.Html;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.retro.musicplayer.backend.model.Song;
 
 import java.util.ArrayList;
 
 import code.name.monkey.retromusic.R;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.util.MusicUtil;
 
 /**

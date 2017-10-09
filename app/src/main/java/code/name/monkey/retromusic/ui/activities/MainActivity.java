@@ -29,6 +29,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.retro.musicplayer.backend.loaders.AlbumLoader;
+import com.retro.musicplayer.backend.loaders.ArtistSongLoader;
+import com.retro.musicplayer.backend.loaders.PlaylistSongsLoader;
+import com.retro.musicplayer.backend.model.Song;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -45,10 +50,7 @@ import code.name.monkey.retromusic.helper.MusicPlayerRemote;
 import code.name.monkey.retromusic.helper.SearchQueryHelper;
 import code.name.monkey.retromusic.interfaces.LibraryTabSelectedItem;
 import code.name.monkey.retromusic.interfaces.MainActivityFragmentCallbacks;
-import code.name.monkey.retromusic.loaders.AlbumLoader;
-import code.name.monkey.retromusic.loaders.ArtistSongLoader;
-import code.name.monkey.retromusic.loaders.PlaylistSongsLoader;
-import code.name.monkey.retromusic.model.Song;
+
 import code.name.monkey.retromusic.service.MusicService;
 import code.name.monkey.retromusic.ui.activities.base.AbsSlidingMusicPanelActivity;
 import code.name.monkey.retromusic.ui.fragments.mainactivity.AlbumsFragment;

@@ -207,6 +207,7 @@ public class SettingsActivity extends AbsBaseActivity
                 return true;
             });
             findPreference = findPreference("day_dream");
+            findPreference.setVisible(false);
             findPreference.setOnPreferenceClickListener(preference -> {
                 Intent intent = new Intent(Settings.ACTION_DREAM_SETTINGS);
                 startActivity(intent);
@@ -236,6 +237,7 @@ public class SettingsActivity extends AbsBaseActivity
             }
             TwoStatePreference toggleVolume = (TwoStatePreference) findPreference("toggle_volume");
             toggleVolume.setOnPreferenceChangeListener((preference, o) -> {
+                Toast.makeText(getContext(), "Restart app!", Toast.LENGTH_SHORT).show();
                 getActivity().recreate();
                 return true;
             });
@@ -261,12 +263,6 @@ public class SettingsActivity extends AbsBaseActivity
                 getActivity().recreate();
                 return true;
             });
-            /*TwoStatePreference toggleExclude = (TwoStatePreference) findPreference("toggle_exclude");
-            toggleExclude.setOnPreferenceChangeListener((preference, newValue) -> {
-                getActivity().recreate();
-                return true;
-            });*/
-
         }
     }
 
